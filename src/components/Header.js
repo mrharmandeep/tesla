@@ -10,18 +10,18 @@ function Header() {
   const cars = useSelector(selectCars);
   return (
     <Container>
-      <a>
+      <a href='/logo'>
         <img src='/images/logo.svg' alt="" />
       </a>
       <Menu>
         {cars && cars.map((car, index) => (
-          <a key={index} href="#">{car}</a>
+          <a key={index} href="/car">{car}</a>
         ))}
 
       </Menu>
       <RightMenu>
-        <a href="#">Shop</a>
-        <a href="#">Tesla Account</a>
+        <a href="/shop">Shop</a>
+        <a href="/account">Tesla Account</a>
         <CustomMenu onClick={() => setBurgerStatus(true)} />
 
       </RightMenu>
@@ -30,13 +30,13 @@ function Header() {
           <CustomCLose onClick={() => setBurgerStatus(false)} />
         </CloseWrapper>
         {cars && cars.map((car, index) => (
-          <li key={index}><a href="#">{car}</a></li>
+          <li key={index}><a href="/car">{car}</a></li>
         ))}
-        <li><a href="#">Existing Inventory</a></li>
-        <li><a href="#">Used Inventory</a></li>
-        <li><a href="#">Trade-in</a></li>
-        <li><a href="#">Cyber-truck</a></li>
-        <li><a href="#">Roadster</a></li>
+        <li><a href="/Existing-inventory">Existing Inventory</a></li>
+        <li><a href="/Used Inventory">Used Inventory</a></li>
+        <li><a href="/trade-in">Trade-in</a></li>
+        <li><a href="/cyber-truck">Cyber-truck</a></li>
+        <li><a href="/roadster">Roadster</a></li>
  
       </BurgerNav>
 
